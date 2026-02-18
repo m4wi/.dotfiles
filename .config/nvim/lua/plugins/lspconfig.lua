@@ -2,13 +2,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
+      -- local lspconfig = require("lspconfig")
 
       -- 🐚 Bash
-        lspconfig.bashls.setup({})
+        vim.lsp.config("bashls", {})
 
       -- 🧠 Lua (Neovim config)
-        lspconfig.lua_ls.setup({
+        vim.lsp.config("lua_ls", {
         settings = {
           Lua = {
             runtime = { version = "LuaJIT" },

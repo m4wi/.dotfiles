@@ -60,6 +60,11 @@ if [ -d "$FNM_PATH" ]; then
 fi
 #    eval "$(fnm env --use-on-cd --shell bash)" > /dev/null 2>&1
 #    eval "$(phpenv init -)"
+
+# pyenv init
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init - bash)"
 ## ------------------------------ ##
 
 
@@ -86,14 +91,15 @@ fi
     alias vi=nvim
     #alias cl="printf '\x1Bc'"
     alias cat="cat -n "
-    alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+    #alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+    alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
     #alias sudo="doas"
     # Pacman snippets
     #alias inx="sudo pacman --noconfirm -S "
     #alias zen="pacman "
-    alias view="nsxiv -s f -g 600x800-50-50"
+    #alias view="nsxiv -s f -g 600x800-50-50"
 
-    alias usb-mount="sudo mount -t vfat -o uid=$(id -u),gid=$(id -g),umask=0022 /dev/sda1 /mnt/usb"
+    alias usb-mount="sudo mount -t auto -o uid=$(id -u),gid=$(id -g),umask=0022 /dev/sda1 /mnt/usb"
     alias usb-umount="sudo umount /mnt/usb"
 
     ## File managment with prompts
@@ -221,3 +227,4 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+

@@ -42,6 +42,10 @@ opt.showmode = false            -- no mostrar -- INSERT -- (lo muestra lualine)
 opt.cmdheight = 0               -- altura mínima de la línea de comandos (si lo soporta tu versión)
 opt.laststatus = 3              -- una sola barra de estado global
 
+vim.cmd.colorscheme("default")
 
-
-
+vim.cmd([[
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NormalNC guibg=NONE ctermbg=NONE
+  highlight EndOfBuffer guibg=NONE
+]])

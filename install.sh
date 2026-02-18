@@ -33,4 +33,5 @@ bklink .xinitrc $HOME/.xinitrc
 bklink .nanorc $HOME/.nanorc
 
 bklink .config/nvim $HOME/.config/nvim
+
 bklink .config/fontconfig $HOME/.config/fontconfig

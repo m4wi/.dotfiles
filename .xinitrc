@@ -55,7 +55,7 @@ fi
 #setsid nohup dwmblocks >/dev/null 2>&1 &
 #export DESKTOP_SESSION=plasma
 #setsid dwmblocks >/dev/null 2>&1 & disown
-setsid nohup dwmblocks >/dev/null 2>&1 &
-exec dwm 
+#setsid nohup dwmblocks >/dev/null 2>&1 &
+exec i3
 #exec startplasma-x11
 #exec cinnamon-session
